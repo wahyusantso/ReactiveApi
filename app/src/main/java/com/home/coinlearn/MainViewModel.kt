@@ -9,7 +9,5 @@ import com.home.coinlearn.data.network.IRepositoryQuote
 import com.home.coinlearn.data.network.response.Quote
 
 class MainViewModel(private val repository: IRepositoryQuote): ViewModel() {
-
-    //toLivedata = convert data flowable to livedata
     val myQuote: LiveData<Quote> = repository.getRandomQuote()
 }
