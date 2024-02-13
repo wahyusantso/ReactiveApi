@@ -70,7 +70,10 @@ dependencies {
     implementation ("io.insert-koin:koin-androidx-compose:3.5.3")
     implementation ("io.insert-koin:koin-android:3.5.3")
     //viewmodel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.6.2")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0")
+    //livedata
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
+    implementation("androidx.compose.runtime:runtime-livedata:1.6.1")
     //retrofit
     implementation("com.squareup.retrofit2:retrofit:2.9.0")
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
@@ -79,5 +82,6 @@ dependencies {
     implementation("io.reactivex.rxjava2:rxjava:2.2.19")
     implementation("io.reactivex.rxjava2:rxandroid:2.1.1")
     implementation("com.squareup.retrofit2:adapter-rxjava2:2.9.0")
-    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0")
+    //mengubah data Flowable menjadi LiveData
+    implementation("androidx.lifecycle:lifecycle-reactivestreams-ktx:2.7.0")
 }

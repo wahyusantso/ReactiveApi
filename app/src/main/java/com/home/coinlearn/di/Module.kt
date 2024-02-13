@@ -9,6 +9,7 @@ import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.androidx.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 import retrofit2.Retrofit
+import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
@@ -24,6 +25,8 @@ val appmodule = module {
         val retrofit = Retrofit.Builder()
             .baseUrl("https://quote-api.dicoding.dev")
             .addConverterFactory(GsonConverterFactory.create())
+            //menggabungkan retrofit dan rx
+            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(get())
             .build()
         retrofit.create(ApiService::class.java)
